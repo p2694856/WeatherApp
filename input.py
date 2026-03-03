@@ -5,7 +5,7 @@
 #     print("Invalid input. Please select a city from the list.")
 # else: 
 #     print(f"You have selected: {x}")
-
+from weatherapi import CITIES
 
     
 
