@@ -1,8 +1,13 @@
 # Input for 5 cities 
-x = input("Please select the weather for one of the following cities: city1, city2, city3, city4, city5: ")
-print(f"You have selected: {x}")
+x = input("Please select the weather for one of the following cities: London, Edinburgh, Cardiff, Belfast, Birmingham: ")
+
+if input not in ["London", "Edinburgh", "Cardiff", "Belfast", "Birmingham"]:
+    print("Invalid input. Please select a city from the list.")
+else: 
+    print(f"You have selected: {x}")
 
 
+    
 
 
 # Import current date and time - 
