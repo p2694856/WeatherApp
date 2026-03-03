@@ -14,13 +14,11 @@
 while True:
     print("Please select the weather for one of the following cities: London, Edinburgh, Cardiff, Belfast, Birmingham: ")
     city = input()
-    try:
-        city = str(city)
-    except:
+    if not city.isalpha():
         print('Please use letters only')
         continue
     if city not in ["London", "Edinburgh", "Cardiff", "Belfast", "Birmingham"]:
         print('Please select a city from the list.')
         continue
     break
-
+print(f"You have selected: {city}")
