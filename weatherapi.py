@@ -2,6 +2,7 @@ import requests
 import os
 from dotenv import load_dotenv
 
+CITIES = ["London", "Cardiff", "Belfast", "Edinburgh", "Birmingham"]
 load_dotenv()
 API_KEY = os.getenv("WeatherAPIKey")
 
@@ -31,3 +32,25 @@ def fetch_weather(city):
     except Exception as e:
         print(f"Error fetching {city}: {e}")
         return None
+    
+# --- This part tells Python to actually RUN the code ---
+if __name__ == "__main__":
+    # Your city list
+    CITIES = ["London", "Cardiff", "Belfast", "Edinburgh", "Birmingham"]
+    
+    print("Starting test pull...")
+    
+    # We only want the first two cities for this check
+    for city in CITIES[:2]:
+        print(f"Checking {city}...")
+        result = fetch_weather(city)
+        
+        if result:
+            # Output the temperature for the city to a file
+            with open("test_output.txt", "a") as f:
+                f.write(f"City: {result['city']} | Temp: {result['temp_c']}°C\n")
+            print(f"Done: {result['city']} saved.")
+        else:
+            print(f"Failed to get data for {city}.")
+
+    print("Check finished. Look for test_output.txt in your folder.")
