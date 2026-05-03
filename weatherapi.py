@@ -34,7 +34,7 @@ def fetch_weather(city):
         return None
     
 # --- This part tells Python to actually RUN the code ---
-if __name__ == "__main__":
+"""if __name__ == "__main__":
     # Your city list
     CITIES = ["London", "Cardiff", "Belfast", "Edinburgh", "Birmingham"]
     
@@ -53,4 +53,4 @@ if __name__ == "__main__":
         else:
             print(f"Failed to get data for {city}.")
 
-    print("Check finished. Look for test_output.txt in your folder.")
+    print("Check finished. Look for test_output.txt in your folder.")"""

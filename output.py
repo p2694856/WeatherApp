@@ -1,5 +1,5 @@
 from weatherapi import fetch_weather, CITIES  # Imports the function and the city list
-
+from input import selectCity  # Import the city selection function
 def test_pull_logic():
     # We only want the first two cities from your CITIES list
     test_cities = CITIES[:2] 
@@ -23,6 +23,6 @@ def test_pull_logic():
         print("Test failed: Could not extract data for at least two cities.")
 
 # This line ensures the test only runs if you run output.py directly
-if __name__ == "__main__":
+"""if __name__ == "__main__":
     print("--- DEBUG: Script Started ---")
-    test_pull_logic()
+    test_pull_logic()"""

@@ -11,14 +11,16 @@ from weatherapi import CITIES
 
 
 # Import current date and time - 
-while True:
-    print("Please select the weather for one of the following cities: London, Edinburgh, Cardiff, Belfast, Birmingham: ")
-    city = input()
-    if not city.isalpha():
-        print('Please use letters only')
-        continue
-    if city not in ["London", "Edinburgh", "Cardiff", "Belfast", "Birmingham"]:
-        print('Please select a city from the list.')
-        continue
-    break
-print(f"You have selected: {city}")
+
+def selectCity():
+    while True:
+        print("Please select the weather for one of the following cities: London, Edinburgh, Cardiff, Belfast, Birmingham: ")
+        city = input()
+        if not city.isalpha():
+            print('Please use letters only')
+            continue
+        if city not in ["London", "Edinburgh", "Cardiff", "Belfast", "Birmingham"]:
+            print('Please select a city from the list.')
+            continue
+        break
+    return city
